@@ -559,25 +559,25 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
     <OutDir>$(SolutionDir)..\..\..\..\operating-system\storage-android\third\library\$(PlatformName)\$(Configuration)\</OutDir>
-    <IntDir>$(__operating_system)time-android\intermediate\$(PlatformName)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir>$(TimeDir)intermediate\$(PlatformName)\$(Configuration)\$(ProjectName)\</IntDir>
     <UseMultiToolTask>true</UseMultiToolTask>
     <TargetName>lib$(ProjectName)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <OutDir>$(SolutionDir)..\..\..\..\operating-system\storage-android\third\library\$(PlatformName)\$(Configuration)\</OutDir>
-    <IntDir>$(__operating_system)time-android\intermediate\$(PlatformName)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir>$(TimeDir)intermediate\$(PlatformName)\$(Configuration)\$(ProjectName)\</IntDir>
     <UseMultiToolTask>true</UseMultiToolTask>
     <TargetName>lib$(ProjectName)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
     <OutDir>$(SolutionDir)..\..\..\..\operating-system\storage-android\third\library\$(PlatformName)\$(Configuration)\</OutDir>
-    <IntDir>$(__operating_system)time-android\intermediate\$(PlatformName)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir>$(TimeDir)intermediate\$(PlatformName)\$(Configuration)\$(ProjectName)\</IntDir>
     <UseMultiToolTask>true</UseMultiToolTask>
     <TargetName>lib$(ProjectName)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
     <OutDir>$(SolutionDir)..\..\..\..\operating-system\storage-android\third\library\$(PlatformName)\$(Configuration)\</OutDir>
-    <IntDir>$(__operating_system)time-android\intermediate\$(PlatformName)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir>$(TimeDir)intermediate\$(PlatformName)\$(Configuration)\$(ProjectName)\</IntDir>
     <UseMultiToolTask>true</UseMultiToolTask>
     <TargetName>lib$(ProjectName)</TargetName>
   </PropertyGroup>
@@ -604,7 +604,7 @@
       <PrecompiledHeaderFile>
       </PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>$(__operating_system)third-android\third\include\include;$(__operating_system)third-android\include;$(__operating_system)operating-system-android/third/include/libmpg123;$(ProjectDir)/src/compat;$(ProjectDir)/src;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(SolutionDir)../../operating-system-android;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../../source/port/include;$(SolutionDir)../../../source/port;.;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(SolutionDir)../../../;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);$(StlIncludeDirectories);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>__ANDROID_API__=19;_BASE_LIBMPG123_LIBRARY;OPT_MULTI;OPT_GENERIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_BASE_LIBMPG123_LIBRARY;OPT_MULTI;OPT_GENERIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ExceptionHandling>Enabled</ExceptionHandling>
       <CLanguageStandard>c11</CLanguageStandard>
       <CppLanguageStandard>c++1z</CppLanguageStandard>
@@ -629,8 +629,9 @@
       <CppLanguageStandard>c++1z</CppLanguageStandard>
       <AdditionalIncludeDirectories>$(__operating_system)third-android\third\include\include;$(__operating_system)third-android\include;$(__operating_system)operating-system-android/third/include/libmpg123;$(ProjectDir)/src/compat;$(ProjectDir)/src;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(SolutionDir)../../operating-system-android;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../../source/port/include;$(SolutionDir)../../../source/port;.;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(SolutionDir)../../../;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);$(StlIncludeDirectories);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Wno-attributes -Wno-sign-compare -Wno-comment -Wno-strict-overflow -Wno-unused-local-typedefs -Wno-unknown-pragmas -Wno-unused-function -Wno-unused-variable -Wno-unused-value -Wno-unknown-pragmas -Wno-unused-function -Wno-implicit-int -Wno-unused-variable  -Wno-pointer-sign -Wdynamic-exception-spec -Wregister -Wenum-conversion</AdditionalOptions>
-      <PreprocessorDefinitions>__ANDROID_API__=19;_BASE_LIBMPG123_LIBRARY;OPT_MULTI;OPT_GENERIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_BASE_LIBMPG123_LIBRARY;OPT_MULTI;OPT_GENERIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ExceptionHandling>Enabled</ExceptionHandling>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
     </ClCompile>
     <Link>
       <LibraryDependencies>m;android;$(StlLibraryName);%(LibraryDependencies)</LibraryDependencies>
@@ -646,8 +647,9 @@
       <CppLanguageStandard>c++1z</CppLanguageStandard>
       <AdditionalIncludeDirectories>$(__operating_system)third-android\third\include\include;$(__operating_system)third-android\include;$(__operating_system)operating-system-android/third/include/libmpg123;$(ProjectDir)/src/compat;$(ProjectDir)/src;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(SolutionDir)../../operating-system-android;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../../source/port/include;$(SolutionDir)../../../source/port;.;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(SolutionDir)../../../;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);$(StlIncludeDirectories);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Wno-attributes -Wno-sign-compare -Wno-comment -Wno-strict-overflow -Wno-unused-local-typedefs -Wno-unknown-pragmas -Wno-unused-function -Wno-unused-variable -Wno-unused-value -Wno-unknown-pragmas -Wno-unused-function -Wno-implicit-int -Wno-unused-variable  -Wno-pointer-sign -Wdynamic-exception-spec -Wregister -Wenum-conversion</AdditionalOptions>
-      <PreprocessorDefinitions>__ANDROID_API__=19;_BASE_LIBMPG123_LIBRARY;OPT_MULTI;OPT_GENERIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_BASE_LIBMPG123_LIBRARY;OPT_MULTI;OPT_GENERIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ExceptionHandling>Enabled</ExceptionHandling>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
     </ClCompile>
     <Link>
       <LibraryDependencies>ace;m;android;$(StlLibraryName);%(LibraryDependencies)</LibraryDependencies>
