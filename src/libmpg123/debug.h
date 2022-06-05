@@ -11,7 +11,7 @@
 */
 
 #include "config.h"
-
+#include <stdlib.h>
 /*
 	I could do that with variadic macros available:
 	#define sdebug(me, s) fprintf(stderr, "[location] " s "\n")
