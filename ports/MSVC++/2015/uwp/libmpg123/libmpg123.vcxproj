@@ -29,7 +29,7 @@
   <ItemGroup>
     <ClInclude Include="..\..\..\..\..\src\compat\compat.h" />
     <ClInclude Include="..\..\..\..\..\src\libmpg123\abi_align.h" />
-    <ClInclude Include="..\..\..\..\..\src\libmpg123\debug.h" />
+    <ClInclude Include="..\..\..\..\..\src\libmpg123\Debug.h" />
     <ClInclude Include="..\..\..\..\..\src\libmpg123\decode.h" />
     <ClInclude Include="..\..\..\..\..\src\libmpg123\frame.h" />
     <ClInclude Include="..\..\..\..\..\src\libmpg123\gapless.h" />

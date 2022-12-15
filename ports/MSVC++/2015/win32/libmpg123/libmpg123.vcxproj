@@ -1180,7 +1180,7 @@ yasm -a x86 -m amd64 -f win64 -p gas -r raw -g null -o "$(IntDir)synth_stereo_x8
     <ClInclude Include="..\..\..\..\..\src\compat\compat.h" />
     <ClInclude Include="..\..\..\..\..\src\compat\compat_impl.h" />
     <ClInclude Include="..\..\..\config.h" />
-    <ClInclude Include="..\..\..\..\..\src\libmpg123\debug.h" />
+    <ClInclude Include="..\..\..\..\..\src\libmpg123\Debug.h" />
     <ClInclude Include="..\..\..\..\..\src\libmpg123\decode.h" />
     <ClInclude Include="..\..\..\..\..\src\libmpg123\frame.h" />
     <ClInclude Include="..\..\..\..\..\src\libmpg123\getbits.h" />
