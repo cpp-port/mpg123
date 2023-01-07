@@ -1,4 +1,4 @@
-/*
+﻿/*
 	compat: Some compatibility functions and header inclusions.
 	Basic standard C stuff, that may barely be above/around C89.
 
@@ -225,7 +225,7 @@ int win32_utf8_wide(const char *const mbptr, wchar_t **wptr, size_t *buflen);
 	(meaning: for Windows), else they are preserved (on POSIX, actual
 	file system access would be needed because of symlinks).
 */
-char* compat_catpath(const char *prefix, const ::file::path & path);
+char* compat_catpath(const char *prefix, const char * path);
 
 /* Return 1 if the given path indicates an existing directory,
    0 otherwise. */
