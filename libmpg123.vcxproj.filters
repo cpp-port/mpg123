@@ -7,6 +7,9 @@
     <Filter Include="Source Files">
       <UniqueIdentifier>{8efc303a-3b04-4b42-991c-6e2bac6c9388}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\NewFilter1">
+      <UniqueIdentifier>{c5ccfb50-cb5e-4bed-9ede-e520f9faf48d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\libmpg123\compat.c">
@@ -110,7 +113,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="mpg123.def">
+    <None Include="libmpg123.def">
       <Filter>Source Files</Filter>
     </None>
   </ItemGroup>

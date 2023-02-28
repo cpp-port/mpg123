@@ -1,6 +1,5 @@
-   /* src/config.h.in.  Generated from configure.ac by autoheader.  */
+﻿   /* src/config.h.in.  Generated from configure.ac by autoheader.  */
 
-#include "operating_system/third_private_config.h"
 
 /* Define if your architecture wants/needs/can use attribute_align_arg and
    alignment checks. It is for 32bit x86... */
@@ -492,7 +491,7 @@
 #define HAVE_STRDUP 1
 #define strcasecmp _stricmp
 #define strncasecmp _strnicmp
-#elif defined(WINDOWS_DESKTOP)
+#elif defined(_WIN32)
 #define HAVE_STRING_H 1
 #define HAVE_STRERROR 1
 #define HAVE_INTTYPES_H 1
