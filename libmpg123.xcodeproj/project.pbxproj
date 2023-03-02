@@ -95,8 +95,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9ACA447A2453EAEE007277DD /* libmpg123.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; name = libmpg123.a; path = libmpg123.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		9ACA482A2453EEAE007277DD /* libios_mpg123.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libios_mpg123.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9ACA447A2453EAEE007277DD /* libmpg123.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libmpg123.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9ACA482A2453EEAE007277DD /* libios_libmpg123.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libios_libmpg123.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ACA4BA524540A01007277DD /* synth_8bit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = synth_8bit.h; sourceTree = "<group>"; };
 		9ACA4BA724540A01007277DD /* index.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = index.h; sourceTree = "<group>"; };
 		9ACA4BA924540A01007277DD /* synth_ntom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = synth_ntom.h; sourceTree = "<group>"; };
@@ -188,8 +188,8 @@
 		9ACA447B2453EAEE007277DD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9ACA447A2453EAEE007277DD /* libmpg123.a */,
-				9ACA482A2453EEAE007277DD /* libios_mpg123.a */,
+				9ACA447A2453EAEE007277DD /* libmpg123.dylib */,
+				9ACA482A2453EEAE007277DD /* libios_libmpg123.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -336,9 +336,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		9ACA44792453EAEE007277DD /* mpg123 */ = {
+		9ACA44792453EAEE007277DD /* libmpg123 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9ACA44832453EAEE007277DD /* Build configuration list for PBXNativeTarget "mpg123" */;
+			buildConfigurationList = 9ACA44832453EAEE007277DD /* Build configuration list for PBXNativeTarget "libmpg123" */;
 			buildPhases = (
 				9ACA44762453EAEE007277DD /* Headers */,
 				9ACA44772453EAEE007277DD /* Sources */,
@@ -348,14 +348,14 @@
 			);
 			dependencies = (
 			);
-			name = mpg123;
+			name = libmpg123;
 			productName = audio;
-			productReference = 9ACA447A2453EAEE007277DD /* libmpg123.a */;
+			productReference = 9ACA447A2453EAEE007277DD /* libmpg123.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
-		9ACA47722453EEAE007277DD /* ios_mpg123 */ = {
+		9ACA47722453EEAE007277DD /* ios_libmpg123 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9ACA48272453EEAE007277DD /* Build configuration list for PBXNativeTarget "ios_mpg123" */;
+			buildConfigurationList = 9ACA48272453EEAE007277DD /* Build configuration list for PBXNativeTarget "ios_libmpg123" */;
 			buildPhases = (
 				9ACA47732453EEAE007277DD /* Headers */,
 				9ACA47D22453EEAE007277DD /* Sources */,
@@ -365,9 +365,9 @@
 			);
 			dependencies = (
 			);
-			name = ios_mpg123;
+			name = ios_libmpg123;
 			productName = audio;
-			productReference = 9ACA482A2453EEAE007277DD /* libios_mpg123.a */;
+			productReference = 9ACA482A2453EEAE007277DD /* libios_libmpg123.a */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
 /* End PBXNativeTarget section */
@@ -384,7 +384,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9ACA44752453EAEE007277DD /* Build configuration list for PBXProject "mpg123" */;
+			buildConfigurationList = 9ACA44752453EAEE007277DD /* Build configuration list for PBXProject "libmpg123" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -397,8 +397,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9ACA44792453EAEE007277DD /* mpg123 */,
-				9ACA47722453EEAE007277DD /* ios_mpg123 */,
+				9ACA44792453EAEE007277DD /* libmpg123 */,
+				9ACA47722453EEAE007277DD /* ios_libmpg123 */,
 			);
 		};
 /* End PBXProject section */
@@ -557,6 +557,8 @@
 				STRINGS_FILE_OUTPUT_ENCODING = "UTF-8";
 				STRIP_INSTALLED_PRODUCT = NO;
 				USER_HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/include/$(PROJECT_NAME)",
+					"$(PROJECT_DIR)/../../_/$(PROJECT_NAME)",
 					"$(WorkspaceDir)/source",
 					"$(WorkspaceDir)/source/include",
 					"$(WorkspaceDir)/operating-system",
@@ -570,7 +572,6 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/..",
 					"$(PROJECT_DIR)/../..",
-					"$(PROJECT_DIR)/include/($PROJECT_NAME)",
 					"$(HOME)/sensitive/sensitive/include",
 					"$(PROJECT_DIR)/src/libout123",
 					"$(PROJECT_DIR)/src/libmpg123",
@@ -661,6 +662,8 @@
 				SKIP_INSTALL = YES;
 				STRINGS_FILE_OUTPUT_ENCODING = "UTF-8";
 				USER_HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/include/$(PROJECT_NAME)",
+					"$(PROJECT_DIR)/../../_/$(PROJECT_NAME)",
 					"$(WorkspaceDir)/source",
 					"$(WorkspaceDir)/source/include",
 					"$(WorkspaceDir)/operating-system",
@@ -674,7 +677,6 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/..",
 					"$(PROJECT_DIR)/../..",
-					"$(PROJECT_DIR)/include/($PROJECT_NAME)",
 					"$(HOME)/sensitive/sensitive/include",
 					"$(PROJECT_DIR)/src/libout123",
 					"$(PROJECT_DIR)/src/libmpg123",
@@ -695,13 +697,14 @@
 				DEVELOPMENT_TEAM = L8N5V6TZE5;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
-				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_PREFIX = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					OPT_GENERIC,
 					OPT_MULTI,
 					DEBUG,
 				);
 				PLATFORM_MODIFIER = macos;
+				PRODUCT_NAME = libmpg123;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -713,12 +716,13 @@
 				DEVELOPMENT_TEAM = L8N5V6TZE5;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
-				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_PREFIX = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					OPT_GENERIC,
 					OPT_MULTI,
 				);
 				PLATFORM_MODIFIER = macos;
+				PRODUCT_NAME = libmpg123;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -740,6 +744,7 @@
 				"GCC_WARN_64_TO_32_BIT_CONVERSION[arch=*64]" = NO;
 				MACH_O_TYPE = staticlib;
 				PLATFORM_MODIFIER = ios;
+				PRODUCT_NAME = ios_libmpg123;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
@@ -761,6 +766,7 @@
 				"GCC_WARN_64_TO_32_BIT_CONVERSION[arch=*64]" = NO;
 				MACH_O_TYPE = staticlib;
 				PLATFORM_MODIFIER = ios;
+				PRODUCT_NAME = ios_libmpg123;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
@@ -769,7 +775,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9ACA44752453EAEE007277DD /* Build configuration list for PBXProject "mpg123" */ = {
+		9ACA44752453EAEE007277DD /* Build configuration list for PBXProject "libmpg123" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9ACA44812453EAEE007277DD /* Debug */,
@@ -778,7 +784,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9ACA44832453EAEE007277DD /* Build configuration list for PBXNativeTarget "mpg123" */ = {
+		9ACA44832453EAEE007277DD /* Build configuration list for PBXNativeTarget "libmpg123" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9ACA44842453EAEE007277DD /* Debug */,
@@ -787,7 +793,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9ACA48272453EEAE007277DD /* Build configuration list for PBXNativeTarget "ios_mpg123" */ = {
+		9ACA48272453EEAE007277DD /* Build configuration list for PBXNativeTarget "ios_libmpg123" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9ACA48282453EEAE007277DD /* Debug */,
