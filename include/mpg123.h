@@ -7,4 +7,4 @@
 #define MPG123_NO_CONFIGURE
 
 
-#include "libmpg123/mpg123.h.in"
+#include "mpg123/mpg123.h.in"
