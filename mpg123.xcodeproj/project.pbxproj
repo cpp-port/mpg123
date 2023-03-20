@@ -179,7 +179,7 @@
 		9ACA44712453EAEE007277DD = {
 			isa = PBXGroup;
 			children = (
-				9ACA48DC245409BF007277DD /* libmpg123 */,
+				9ACA48DC245409BF007277DD /* mpg123 */,
 				9ACA447B2453EAEE007277DD /* Products */,
 				9ACA487B2453FEAE007277DD /* Frameworks */,
 			);
@@ -201,13 +201,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		9ACA48DC245409BF007277DD /* libmpg123 */ = {
+		9ACA48DC245409BF007277DD /* mpg123 */ = {
 			isa = PBXGroup;
 			children = (
 				9ACA4D6324540A10007277DD /* config.h */,
 				9ACA4B9424540A01007277DD /* src */,
 			);
-			name = libmpg123;
+			name = mpg123;
 			sourceTree = "<group>";
 		};
 		9ACA4B9424540A01007277DD /* src */ = {
@@ -336,9 +336,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		9ACA44792453EAEE007277DD /* libmpg123 */ = {
+		9ACA44792453EAEE007277DD /* mpg123 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9ACA44832453EAEE007277DD /* Build configuration list for PBXNativeTarget "libmpg123" */;
+			buildConfigurationList = 9ACA44832453EAEE007277DD /* Build configuration list for PBXNativeTarget "mpg123" */;
 			buildPhases = (
 				9ACA44762453EAEE007277DD /* Headers */,
 				9ACA44772453EAEE007277DD /* Sources */,
@@ -348,14 +348,14 @@
 			);
 			dependencies = (
 			);
-			name = libmpg123;
+			name = mpg123;
 			productName = audio;
 			productReference = 9ACA447A2453EAEE007277DD /* libmpg123.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
-		9ACA47722453EEAE007277DD /* ios_libmpg123 */ = {
+		9ACA47722453EEAE007277DD /* ios_mpg123 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9ACA48272453EEAE007277DD /* Build configuration list for PBXNativeTarget "ios_libmpg123" */;
+			buildConfigurationList = 9ACA48272453EEAE007277DD /* Build configuration list for PBXNativeTarget "ios_mpg123" */;
 			buildPhases = (
 				9ACA47732453EEAE007277DD /* Headers */,
 				9ACA47D22453EEAE007277DD /* Sources */,
@@ -365,7 +365,7 @@
 			);
 			dependencies = (
 			);
-			name = ios_libmpg123;
+			name = ios_mpg123;
 			productName = audio;
 			productReference = 9ACA482A2453EEAE007277DD /* libios_libmpg123.a */;
 			productType = "com.apple.product-type.library.dynamic";
@@ -384,7 +384,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9ACA44752453EAEE007277DD /* Build configuration list for PBXProject "libmpg123" */;
+			buildConfigurationList = 9ACA44752453EAEE007277DD /* Build configuration list for PBXProject "mpg123" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -397,8 +397,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9ACA44792453EAEE007277DD /* libmpg123 */,
-				9ACA47722453EEAE007277DD /* ios_libmpg123 */,
+				9ACA44792453EAEE007277DD /* mpg123 */,
+				9ACA47722453EEAE007277DD /* ios_mpg123 */,
 			);
 		};
 /* End PBXProject section */
@@ -557,6 +557,7 @@
 				STRINGS_FILE_OUTPUT_ENCODING = "UTF-8";
 				STRIP_INSTALLED_PRODUCT = NO;
 				USER_HEADER_SEARCH_PATHS = (
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/configuration/$(PROJECT_NAME)",
 					"$(PROJECT_DIR)/include/$(PROJECT_NAME)",
 					"$(PROJECT_DIR)/../../_/$(PROJECT_NAME)",
 					"$(WorkspaceDir)/source",
@@ -566,7 +567,7 @@
 					"$(WorkspaceDir)/source/app",
 					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include",
 					"$(WorkspaceDir)/source/port/include/operating_system/macos",
-					"$(WorkspaceDir)/source/port/include/operating_system/$(PLATFORM_MODIFIER)",
+					"$(WorkspaceDir)/port/include",
 					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)",
 					.,
 					"$(PROJECT_DIR)",
@@ -662,6 +663,7 @@
 				SKIP_INSTALL = YES;
 				STRINGS_FILE_OUTPUT_ENCODING = "UTF-8";
 				USER_HEADER_SEARCH_PATHS = (
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/configuration/$(PROJECT_NAME)",
 					"$(PROJECT_DIR)/include/$(PROJECT_NAME)",
 					"$(PROJECT_DIR)/../../_/$(PROJECT_NAME)",
 					"$(WorkspaceDir)/source",
@@ -671,7 +673,7 @@
 					"$(WorkspaceDir)/source/app",
 					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include",
 					"$(WorkspaceDir)/source/port/include/operating_system/macos",
-					"$(WorkspaceDir)/source/port/include/operating_system/$(PLATFORM_MODIFIER)",
+					"$(WorkspaceDir)/port/include",
 					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)",
 					.,
 					"$(PROJECT_DIR)",
@@ -775,7 +777,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9ACA44752453EAEE007277DD /* Build configuration list for PBXProject "libmpg123" */ = {
+		9ACA44752453EAEE007277DD /* Build configuration list for PBXProject "mpg123" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9ACA44812453EAEE007277DD /* Debug */,
@@ -784,7 +786,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9ACA44832453EAEE007277DD /* Build configuration list for PBXNativeTarget "libmpg123" */ = {
+		9ACA44832453EAEE007277DD /* Build configuration list for PBXNativeTarget "mpg123" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9ACA44842453EAEE007277DD /* Debug */,
@@ -793,7 +795,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9ACA48272453EEAE007277DD /* Build configuration list for PBXNativeTarget "ios_libmpg123" */ = {
+		9ACA48272453EEAE007277DD /* Build configuration list for PBXNativeTarget "ios_mpg123" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9ACA48282453EEAE007277DD /* Debug */,
