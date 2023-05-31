@@ -95,8 +95,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9A03B8CA2A25C2A900A0E33E /* release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = release.xcconfig; sourceTree = SOURCE_ROOT; };
-		9A03B8CB2A25C2A900A0E33E /* debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = debug.xcconfig; sourceTree = SOURCE_ROOT; };
+		9A03B8CA2A25C2A900A0E33E /* _____release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = _____release.xcconfig; sourceTree = SOURCE_ROOT; };
+		9A03B8CB2A25C2A900A0E33E /* _____debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = _____debug.xcconfig; sourceTree = SOURCE_ROOT; };
 		9ACA447A2453EAEE007277DD /* libmpg123.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libmpg123.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ACA482A2453EEAE007277DD /* libios_libmpg123.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libios_libmpg123.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ACA4BA524540A01007277DD /* synth_8bit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = synth_8bit.h; sourceTree = "<group>"; };
@@ -207,8 +207,8 @@
 			isa = PBXGroup;
 			children = (
 				9ACA4D6324540A10007277DD /* config.h */,
-				9A03B8CB2A25C2A900A0E33E /* debug.xcconfig */,
-				9A03B8CA2A25C2A900A0E33E /* release.xcconfig */,
+				9A03B8CB2A25C2A900A0E33E /* _____debug.xcconfig */,
+				9A03B8CA2A25C2A900A0E33E /* _____release.xcconfig */,
 				9ACA4B9424540A01007277DD /* src */,
 			);
 			name = mpg123;
@@ -479,7 +479,7 @@
 /* Begin XCBuildConfiguration section */
 		9ACA44812453EAEE007277DD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9A03B8CB2A25C2A900A0E33E /* debug.xcconfig */;
+			baseConfigurationReference = 9A03B8CB2A25C2A900A0E33E /* _____debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
@@ -591,7 +591,7 @@
 		};
 		9ACA44822453EAEE007277DD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9A03B8CA2A25C2A900A0E33E /* release.xcconfig */;
+			baseConfigurationReference = 9A03B8CA2A25C2A900A0E33E /* _____release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
