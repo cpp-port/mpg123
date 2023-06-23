@@ -193,7 +193,7 @@ size_t unintr_write(int fd, void const *buffer, size_t bytes)
    size_t written = 0;
    while(bytes)
    {
-      ssize_t part = write(fd, (char*)buffer+written, (unsigned int) bytes);
+      ssize_t part = _write(fd, (char*)buffer+written, (unsigned int) bytes);
       if(part < 0 && errno != EINTR)
          break;
       bytes   -= part;
@@ -208,7 +208,7 @@ size_t unintr_read(int fd, void *buffer, size_t bytes)
    size_t got = 0;
    while(bytes)
    {
-      ssize_t part = read(fd, (char*)buffer+got, (unsigned int) bytes);
+      ssize_t part = _read(fd, (char*)buffer+got, (unsigned int) bytes);
       if(part < 0 && errno != EINTR)
          break;
       bytes -= part;
