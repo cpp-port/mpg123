@@ -9,6 +9,7 @@
 #include "mpg123lib_intern.h"
 #include "debug.h"
 
+
 /* That altivec alignment part here should not hurt generic code, I hope */
 #ifdef OPT_ALTIVEC
 static ALIGNED(16) real cos64[16];
@@ -73,7 +74,7 @@ static long intwinbase[] = {
  64019, 65290, 66494, 67629, 68692, 69679, 70590, 71420, 72169, 72835,
  73415, 73908, 74313, 74630, 74856, 74992, 75038 };
 
-void prepare_decode_tables()
+void prepare_decode_tables(void)
 {
 #if !defined(REAL_IS_FIXED) || !defined(PRECALC_TABLES)
   int i,k,kr,divv;
