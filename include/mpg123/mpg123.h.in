@@ -619,8 +619,7 @@ MPG123_EXPORT int mpg123_decode( mpg123_handle *mh
  *  \param bytes number of output bytes ready in the buffer
  *  \return MPG123_OK or error/message code
  */
-MPG123_EXPORT int mpg123_decode_frame( mpg123_handle *mh
-,	off_t *num, unsigned char **audio, size_t *bytes );
+MPG123_EXPORT int mpg123_decode_frame(mpg123_handle *mh, off_t *num, unsigned char **audio, size_t *bytes );
 
 /** Decode current MPEG frame to internal buffer.
  * Warning: This is experimental API that might change in future releases!
@@ -755,8 +754,7 @@ MPG123_EXPORT off_t mpg123_timeframe(mpg123_handle *mh, double sec);
  *  \param fill number of recorded index offsets; size of the array
  *  \return MPG123_OK on success
  */
-MPG123_EXPORT int mpg123_index( mpg123_handle *mh
-,	off_t **offsets, off_t *step, size_t *fill );
+MPG123_EXPORT int mpg123_index( mpg123_handle *mh,	off_t **offsets, off_t *step, size_t *fill );
 
 /** Set the frame index table
  *  Setting offsets to NULL and fill > 0 will allocate fill entries. Setting offsets

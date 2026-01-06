@@ -201,7 +201,7 @@
 #undef HAVE_STDLIB_H
 
 /* Define to 1 if you have the `strerror' function. */
-#undef HAVE_STRERROR
+//#undef HAVE_STRERROR
 
 /* Define to 1 if you have the <strings.h> header file. */
 #undef HAVE_STRINGS_H

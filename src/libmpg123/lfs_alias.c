@@ -97,7 +97,7 @@ $type attribute_align_arg ALIAS_NAME($name)($args)
 }
 EOT
 
-}' < mpg123.h.in
+}' < mpg123.h
 */
 
 int NATIVE_NAME(mpg123_open)(mpg123_handle *mh, const char *path);

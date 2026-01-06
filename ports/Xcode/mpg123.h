@@ -12,6 +12,6 @@
 #include <sys/types.h>
 
 #define MPG123_NO_CONFIGURE
-#include "../../src/libmpg123/mpg123.h.in" /* Yes, .h.in; we include the configure template! */
+#include "../../src/libmpg123/mpg123.h" /* Yes, .h.in; we include the configure template! */
 
 #endif

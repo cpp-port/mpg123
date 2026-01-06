@@ -42,7 +42,7 @@ if(/^\s*MPG123_EXPORT\s+(\S+)\s+(mpg123_\S+)\((.*)\);\s*$/)
 	next unless ($type =~ /off_t/ or $args =~ /off_t/);
 	print "$name\n" unless grep {$_ eq $name} 
 		("mpg123_open", "mpg123_open_fd", "mpg123_open_handle", "mpg123_replace_reader", "mpg123_replace_reader_handle");
-}' < mpg123.h.in
+}' < mpg123.h
 
 mpg123_decode_frame
 mpg123_framebyframe_decode
