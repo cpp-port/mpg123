@@ -427,6 +427,9 @@
     <Lib>
       <SubSystem>Windows</SubSystem>
     </Lib>
+    <PreBuildEvent>
+      <Command> </Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ASanStaticDebug|Win32'">
     <ClCompile>
@@ -618,6 +621,9 @@
     <Lib>
       <SubSystem>Windows</SubSystem>
     </Lib>
+    <PreBuildEvent>
+      <Command> </Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -801,6 +807,9 @@
     <Lib>
       <SubSystem>Windows</SubSystem>
     </Lib>
+    <PreBuildEvent>
+      <Command> </Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='StaticDebug|ARM64'">
     <ClCompile>
@@ -866,6 +875,9 @@
     <Lib>
       <SubSystem>Windows</SubSystem>
     </Lib>
+    <PreBuildEvent>
+      <Command> </Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ASanStaticDebug|x64'">
     <ClCompile>
@@ -1192,6 +1204,9 @@
     <Lib>
       <SubSystem>Windows</SubSystem>
     </Lib>
+    <PreBuildEvent>
+      <Command> </Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='StaticRelease|ARM64'">
     <ClCompile>
@@ -1262,6 +1277,9 @@
     <Lib>
       <SubSystem>Windows</SubSystem>
     </Lib>
+    <PreBuildEvent>
+      <Command> </Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <YASM Include="dct36_3dnow.S" />
