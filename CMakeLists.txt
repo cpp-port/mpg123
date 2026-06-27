@@ -4,6 +4,8 @@ project(mpg123 CXX)
 
 message(STATUS "libmpg123 Library")
 
+set(mpg123_compile_definitions HAVE_CONFIG_H OPT_GENERIC_DITHER ASMALIGN_BALIGN)
+
 list(APPEND library_source
    src/libmpg123/abi_align.h
    src/libmpg123/compat.c
@@ -98,6 +100,7 @@ if(${ANDROID})
 
 if (ANDROID_ABI STREQUAL "arm64-v8a")
     message("Building MPG123 for ARM64 (arm64-v8a)")
+    list(APPEND mpg123_compile_definitions OPT_MULTI OPT_GENERIC OPT_NEON64 REAL_IS_FLOAT)
     list(APPEND library_source
        src/libmpg123/getcpuflags_arm.c
 
@@ -120,6 +123,7 @@ if (ANDROID_ABI STREQUAL "arm64-v8a")
     )
 elseif (ANDROID_ABI STREQUAL "armeabi-v7a")
     message("Building MPG123 for ARMv7-A (armeabi-v7a)")
+    list(APPEND mpg123_compile_definitions OPT_MULTI OPT_GENERIC OPT_NEON REAL_IS_FLOAT)
     list(APPEND library_source
 
        src/libmpg123/getcpuflags_arm.c
@@ -201,7 +205,8 @@ if (ANDROID_ABI STREQUAL "x86")
 
     )
 elseif (ANDROID_ABI STREQUAL "x86_64")
-        message("Building MPG123 for Android ARMv7-A (armeabi-v7a)")
+        message("Building MPG123 for x86_64")
+        list(APPEND mpg123_compile_definitions OPT_MULTI OPT_X86_64 OPT_GENERIC OPT_AVX REAL_IS_FLOAT)
         list(APPEND library_source
 
            src/libmpg123/getcpuflags_x86_64.S
@@ -240,8 +245,8 @@ add_library(static_${PROJECT_NAME} STATIC ${library_source})
 
 set_target_properties(${PROJECT_NAME} PROPERTIES LINKER_LANGUAGE CXX)
 
-target_compile_definitions(${PROJECT_NAME} PRIVATE HAVE_CONFIG_H OPT_GENERIC_DITHER)
-target_compile_definitions(static_${PROJECT_NAME} PRIVATE HAVE_CONFIG_H OPT_GENERIC_DITHER)
+target_compile_definitions(${PROJECT_NAME} PRIVATE ${mpg123_compile_definitions})
+target_compile_definitions(static_${PROJECT_NAME} PRIVATE ${mpg123_compile_definitions})
 
 
 if (MSVC)

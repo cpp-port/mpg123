@@ -29,7 +29,7 @@
 
 struct cpuflags
 {
-#if defined(_M_ARM)
+#if defined(_M_ARM) || defined(OPT_ARM) || defined(OPT_NEON) || defined(OPT_NEON64)
 	unsigned int has_neon;
 #else
 	unsigned int id;
