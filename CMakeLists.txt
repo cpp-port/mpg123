@@ -96,7 +96,7 @@ list(APPEND library_source
 endif()
 
 
-if(${ANDROID})
+if(${__ANDROID__})
 
 if (ANDROID_ABI STREQUAL "arm64-v8a")
     message("Building MPG123 for ARM64 (arm64-v8a)")
@@ -255,7 +255,7 @@ if (MSVC)
     target_link_options(${PROJECT_NAME} PRIVATE "/SUBSYSTEM:WINDOWS")
     target_link_libraries(${PROJECT_NAME} PRIVATE ${library_references} ${global_library_references})
     target_link_libraries(${PROJECT_NAME} PRIVATE ws2_32 winmm shlwapi zlib)
-elseif (${LINUX} OR ${__BSD__} OR ${ANDROID})
+elseif (${LINUX} OR ${__BSD__} OR ${__ANDROID__})
 
 
     target_compile_options(${PROJECT_NAME} PRIVATE $<$<COMPILE_LANGUAGE:CXX>:-fpermissive  ${EXTRA_CXX_TARGET_COMPILER_OPTIONS}>)
